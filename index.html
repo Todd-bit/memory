@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<style>
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 250px;
+  height: 250px;
+  float left;
+}
+
+/* flip speed */
+.flipper {
+  transition: 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+  background-color: #fff;
+}
+
+.artist-1 {
+  background: url(http://img.bleacherreport.net/img/images/photos/003/556/940/edab30087cea36c0ca206fc61a4b10fa_crop_north.jpg?w=630&h=420&q=75) center center no-repeat;
+  background-size: cover; 
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="flip-container">
+  <div class="flipper">
+    <div class="front artist-1">
+      <!-- front content -->
+    </div>
+    <div class="back">
+      <p>You won</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-container">
+  <div class="flipper">
+    <div class="front artist-1">
+      <!-- front content -->
+    </div>
+    <div class="back">
+      <p>You won</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-container">
+  <div class="flipper">
+    <div class="front artist-1">
+      <!-- front content -->
+    </div>
+    <div class="back">
+      <p>You won</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-container">
+  <div class="flipper">
+    <div class="front artist-1">
+      <!-- front content -->
+    </div>
+    <div class="back">
+      <p>You won</p>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
